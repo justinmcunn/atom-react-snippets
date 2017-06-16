@@ -1,0 +1,55 @@
+".source.js":
+  "Redux: Connected Component":
+    prefix: "_reduxcc"
+    body: """
+      import React, { Component } from 'react';
+      import { PropTypes } from 'prop-types';
+      import { connect } from 'react-redux';
+
+      class ${1} extends Component {
+        constructor(props) {
+          super(props);
+        }
+
+        render() {
+          return (
+
+          );
+        }
+      }
+
+      function mapStateToProps(state) {
+        return {
+
+        };
+      }
+
+      ${1}.propTypes = {
+
+      };
+
+      export default connect(mapStateToProps)(${1});
+    """
+  "Redux: Reducer":
+    prefix: "_reduxr"
+    body:"""
+      const defaultState = {};
+
+      const ${1} = (state = defaultState, action) => {
+        switch (action.type) {
+          default:
+            return state;
+        }
+      };
+
+      export default ${1};
+    """
+  "Redux: Action Creator":
+    prefix: "_reduxa"
+    body:"""
+      export function ${1}() {
+        return {
+          type: '${2}',
+        };
+      }
+    """
